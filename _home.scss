@@ -1,0 +1,34 @@
+// ============================================================
+// FILE   : _home.scss
+// FUNGSI : Grid utama halaman + utility spacing (loop @each)
+// LOKASI : scss/pages/_home.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+
+// ===== Grid Utama Halaman =====
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: $jarak;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+// ===== Utility Spacing (pakai @each loop) =====
+$spacings: (
+  'sm': $jarak-sm,
+  'md': $jarak-md,
+  'lg': $jarak-lg,
+  'xl': $jarak-xl
+);
+
+@each $name, $value in $spacings {
+  .mt-#{$name} { margin-top: $value; }
+  .mb-#{$name} { margin-bottom: $value; }
+  .p-#{$name}  { padding: $value; }
+}

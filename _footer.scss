@@ -1,0 +1,15 @@
+// ============================================================
+// FILE   : _footer.scss
+// FUNGSI : Styling footer (copyright)
+// LOKASI : scss/layout/_footer.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  grid-area: footer;
+  @include card($padding: 12px 20px);
+  text-align: center;
+  @include transition(background, color);
+}

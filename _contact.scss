@@ -1,0 +1,21 @@
+// ============================================================
+// FILE   : _contact.scss
+// FUNGSI : Styling link di section kontak
+// LOKASI : scss/components/_contact.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+#kontak {
+  a {
+    color: var(--warna-kedua);
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover {
+      color: var(--warna-aksen);
+      text-decoration: underline;
+    }
+  }
+}

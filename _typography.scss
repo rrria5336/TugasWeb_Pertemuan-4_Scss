@@ -1,0 +1,17 @@
+// ============================================================
+// FILE   : _typography.scss
+// FUNGSI : Styling body & teks dasar
+// LOKASI : scss/base/_typography.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+  font-family: $font-primary;
+  background: var(--warna-bg);
+  color: var(--warna-teks);
+  padding: $jarak;
+  line-height: 1.6;
+  @include transition(background, color);
+}

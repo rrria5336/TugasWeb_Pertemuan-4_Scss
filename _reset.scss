@@ -1,0 +1,11 @@
+// ============================================================
+// FILE   : _reset.scss
+// FUNGSI : Reset default margin & padding browser
+// LOKASI : scss/base/_reset.scss
+// ============================================================
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

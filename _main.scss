@@ -1,0 +1,41 @@
+// ============================================================
+// FILE   : _main.scss
+// FUNGSI : Styling konten utama (kartu putih, heading, list)
+// LOKASI : scss/layout/_main.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.main {
+  grid-area: main;
+  @include card($padding: 25px 30px);
+  @include transition(background, color);
+
+  h2 {
+    color: var(--warna-utama);
+    border-bottom: 3px solid var(--warna-kedua);
+    padding-bottom: 8px;
+    margin-bottom: $jarak-md;
+  }
+
+  h3 {
+    color: var(--warna-kedua);
+    margin-top: $jarak-md;
+  }
+
+  p {
+    margin-bottom: $jarak-sm;
+  }
+
+  ul {
+    padding-left: 25px;
+    margin-bottom: $jarak-md;
+  }
+
+  hr {
+    margin: 25px 0;
+    border: none;
+    border-top: 2px solid var(--warna-bg);
+  }
+}

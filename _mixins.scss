@@ -1,0 +1,38 @@
+// ============================================================
+// FILE   : _mixins.scss
+// FUNGSI : Kumpulan mixin reusable (flex, card, responsive, dll)
+// LOKASI : scss/abstracts/_mixins.scss
+// ============================================================
+
+@use 'variables' as *;
+
+// ===== Mixin 1: Flexbox helper =====
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// ===== Mixin 2: Responsive breakpoint (max-width) =====
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == md {
+    @media (max-width: $breakpoint-md) { @content; }
+  }
+}
+
+// ===== Mixin 3: Card style =====
+@mixin card($padding: $jarak-lg, $shadow: true) {
+  background: var(--warna-kartu);
+  border-radius: $sudut;
+  padding: $padding;
+
+  @if $shadow {
+    box-shadow: var(--bayangan);
+  }
+}
+
+// ===== Mixin 4: Transition =====
+@mixin transition($props: all) {
+  transition: $props $transisi;
+}

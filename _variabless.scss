@@ -1,0 +1,36 @@
+// ============================================================
+// FILE   : _variables.scss
+// FUNGSI : Menyimpan semua variabel (warna, jarak, font, dll)
+// LOKASI : scss/abstracts/_variables.scss
+// ============================================================
+
+// ===== WARNA (Light Mode Default) =====
+$warna-utama:   #2c3e50;
+$warna-kedua:   #3498db;
+$warna-aksen:   #e67e22;
+$warna-bg:      #f0f2f5;
+$warna-teks:    #2c3e50;
+$warna-kartu:   #ffffff;
+$warna-putih:   #ffffff;
+
+// ===== BAYANGAN & SUDUT =====
+$bayangan: 0 2px 10px rgba(0, 0, 0, 0.1);
+$sudut: 10px;
+
+// ===== JARAK (SPACING) =====
+$jarak-sm: 10px;
+$jarak-md: 15px;
+$jarak:    20px;
+$jarak-lg: 25px;
+$jarak-xl: 30px;
+
+// ===== FONT =====
+$font-primary:    'Segoe UI', Tahoma, sans-serif;
+$font-size-base:  1rem;
+$font-size-lg:    1.8rem;
+
+// ===== BREAKPOINTS =====
+$breakpoint-md: 768px;
+
+// ===== TRANSISI =====
+$transisi: 0.3s ease-in-out;

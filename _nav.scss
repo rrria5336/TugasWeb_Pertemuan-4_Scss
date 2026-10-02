@@ -1,0 +1,31 @@
+// ============================================================
+// FILE   : _nav.scss
+// FUNGSI : Styling navigasi (link Home, Tentang, dll)
+// LOKASI : scss/components/_nav.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.nav {
+  @include flex(row, flex-start, center);
+  gap: $jarak-sm;
+  flex-wrap: wrap;
+
+  a {
+    color: var(--warna-putih);
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    @include transition(background);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  @include respond-to(md) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,44 @@
+// ============================================================
+// FILE   : _header.scss
+// FUNGSI : Styling header (foto profil, judul, gradient)
+// LOKASI : scss/layout/_header.scss
+// ============================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, var(--warna-kedua), var(--warna-utama));
+  color: var(--warna-putih);
+  padding: 20px 25px;
+  border-radius: $sudut;
+  @include flex(row, flex-start, center);
+  gap: $jarak;
+  flex-wrap: wrap;
+  @include transition(background);
+
+  // ===== Foto Profil =====
+  .foto-profil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--warna-putih);
+  }
+
+  // ===== Judul Header =====
+  .judul-header {
+    flex: 1;
+
+    h1 {
+      font-size: $font-size-lg;
+    }
+  }
+
+  // ===== Responsive =====
+  @include respond-to(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
